@@ -4,7 +4,6 @@ expertMode = true
 
 [nix]
 channel = "stable-25_05"
-packages = ["unzip"]
 
 [workflows]
 runButton = "Project"
@@ -34,6 +33,6 @@ outputType = "webview"
 localPort = 5000
 externalPort = 80
 
-[[ports]]
-localPort = 43207
-externalPort = 3000
+[deployment]
+deploymentTarget = "autoscale"
+run = ["node", "server.js"]
